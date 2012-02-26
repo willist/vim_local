@@ -25,62 +25,129 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/sandboxes/vim_local/_vimrc
+autocmd! bufwritepost vimrc source Vim_Local()/_vimrc
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ruler "Always show current position
+
+" Set backspace config
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+set ignorecase "Ignore case when searching
+set smartcase
+
+set hlsearch
+
+set incsearch "Make search act like search in modern browsers
+set nolazyredraw "Don't redraw while executing macros
+
+set magic "Set magic on, for regular expressions
+
+set showmatch "Show matching brackets when text indicator is over them
+set mat=2 "How many tenths of a second to blink
+
+" No sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable "Enable syntax hl
+
+" Set font according to system
+if MySys() == "mac"
+    set gfn=Menlo:h14
+    set shell=/bin/bash
+elseif MySys() == "windows"
+    set gfn=Bitstream\ Vera\ Sans\ Mono:h10
+elseif MySys() == "linux"
+    set gfn=Monospace\ 10
+    set shell=/bin/bash
+endif
+
+if has("gui_running")
+    set guioptions-=T
+    set t_Co=256
+    set background=dark
+    colorscheme solarized 
+    " colorscheme zellner
+    set nonu
+else
+    colorscheme zellner
+    set background=dark
+
+    set nonu
+endif
+
+set encoding=utf8
+try
+    lang en_US
+catch
+endtry
+
+set ffs=unix,dos,mac "Default file types
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is under source control anyway...
+set nobackup
+set nowb
+set noswapfile
+
+"Persistent undo
+try
+    if MySys() == "windows"
+        set undodir=C:\Windows\Temp
+    else
+        set undodir=Vim_Local()/undodir
+    endif
+
+    set undofile
+catch
+endtry
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set smarttab
+
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let python_highlight_all = 1
+
+au FileType python syn keyword pythonDecorator True None False self
+
+au BufNewFile,BufRead *.jinja set syntax=htmljinja
+
 set smartindent
-set tabstop=4
-set smarttab
-set shiftwidth=4
-set expandtab
 set ruler
 set lines=60 columns=80
 
-" filetype on
-" filetype plugin on
-" 
-" syntax enable
-" set background=dark
-" colorscheme solarized 
-" 
-" ""Folding
-" set foldmethod=indent
-" set foldnestmax=10
-" nnoremap <space> za
-" nnoremap <F11> zr
-" nnoremap <F12> zm
-" 
-" if has("gui_macvim")
-  " set guifont=Menlo:h10:cANSI
-" elseif has("gui_running")
-  " set guifont=Consolas:h10:cANSI
-" endif
-" 
-" set diffexpr=MyDiff()
-" function MyDiff()
-  " let opt = '-a --binary '
-  " if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  " if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  " let arg1 = v:fname_in
-  " if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  " let arg2 = v:fname_new
-  " if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  " let arg3 = v:fname_out
-  " if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  " let eq = ''
-  " if $VIMRUNTIME =~ ' '
-    " if &sh =~ '\<cmd'
-      " let cmd = '""' . $VIMRUNTIME . '\diff"'
-      " let eq = '"'
-    " else
-      " let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    " endif
-  " else
-    " let cmd = $VIMRUNTIME . '\diff'
-  " endif
-  " silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-" endfunction
-" 
-" autocmd BufEnter *.jinja set filetype=jinja
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Folding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent
+set foldnestmax=10
+noremap <space> za
+noremap <F11> zr
+noremap <F12> zm
