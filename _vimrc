@@ -24,9 +24,6 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source Vim_Local()/_vimrc
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -75,6 +72,7 @@ if has("gui_running")
     set guioptions-=T
     set t_Co=256
     set background=dark
+    set guifont=Consolas:h10:cANSI
     colorscheme solarized 
     " colorscheme zellner
     set nonu
@@ -107,7 +105,7 @@ try
     if MySys() == "windows"
         set undodir=C:\Windows\Temp
     else
-        set undodir=Vim_Local()/undodir
+        set undodir=/tmp/vim/undodir
     endif
 
     set undofile
