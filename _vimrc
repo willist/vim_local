@@ -102,7 +102,7 @@ set noswapfile
 
 "Persistent undo
 try
-    if MySys() == "windows"
+    if MySys() == "windows" 
         set undodir=C:\Windows\Temp
     else
         set undodir=/tmp/vim/undodir
@@ -149,3 +149,13 @@ set foldnestmax=10
 noremap <space> za
 noremap <F11> zr
 noremap <F12> zm
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> XML Scripts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:closetag_html_style=1
+
+if MySys() == "windows"
+    source D:/playground/vim_local/vim73/scripts/closetag.vim  
+endif
