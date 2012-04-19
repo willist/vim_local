@@ -5,12 +5,13 @@ Setup
 #. Replace vimrc with the following::
    
     fun! MySys()
-        return "windows"
+        " return "windows"
+        " return "linux"
+        " return "max"
     endfun
 
     set runtimepath=<repository>,$VIMRUNTIME
     source <repository>/_vimrc
 
-where <repository> is the location of the cloned repository.
-
-
+#. Replace <repository> with absolute path to this repository
+#. Uncomment the line in fun! MySys which corresponds to your OS
