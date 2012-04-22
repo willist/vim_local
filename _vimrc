@@ -154,8 +154,8 @@ noremap <F12> zm
 "=> XML Scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:closetag_html_style=1
+" let g:closetag_html_style=1
 
-if MySys() == "windows"
-    source D:/playground/vim_local/vim73/scripts/closetag.vim  
-endif
+" if MySys() == "windows"
+    " source C:/Users/willist/sandboxes/vim_local/vim73/scripts/closetag.vim  
+" endif
