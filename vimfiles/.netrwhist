@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='D:/playground/cpython/PC/VS8.0'
-let g:netrw_dirhist_2='D:/sandboxes/pba_fresh/paytables/src'
-let g:netrw_dirhist_3='D:/playground'
-let g:netrw_dirhist_4='D:/sandboxes/pba_fresh/paytables/PaytableInstallerAutomatedTesting/scripts'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/willist/sandboxes/vim_local'
+let g:netrw_dirhist_2='/home/willist/sandboxes'
+let g:netrw_dirhist_3='/home/willist'
+let g:netrw_dirhist_4='/home/willist/sandboxes/vim_local'
+let g:netrw_dirhist_5='/home/willist/sandboxes'
+let g:netrw_dirhist_6='/home/willist/sandboxes/vim_local'
