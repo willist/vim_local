@@ -72,7 +72,6 @@ if has("gui_running")
     set guioptions-=T
     set t_Co=256
     set background=dark
-    set guifont=Consolas:h10:cANSI
     colorscheme solarized 
     " colorscheme zellner
     set nonu
