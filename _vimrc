@@ -62,7 +62,7 @@ if MySys() == "mac"
     set gfn=Menlo:h14
     set shell=/bin/bash
 elseif MySys() == "windows"
-    set gfn=Bitstream\ Vera\ Sans\ Mono:h10
+    set gfn=Consolas:h10:cANSI
 elseif MySys() == "linux"
     set gfn=Monospace\ 10
     set shell=/bin/bash
