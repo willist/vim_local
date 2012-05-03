@@ -10,8 +10,11 @@ Setup
         " return "max"
     endfun
 
-    set runtimepath=<repository>,$VIMRUNTIME
-    source <repository>/_vimrc
+    let $VIMLOCAL = '<repository>'
+    let $VIMFILES = '<repository>/vimfiles'
+
+    set runtimepath=$VIMFILES,$VIMRUNTIME
+    source $VIMLOCAL/_vimrc
 
 #. Replace <repository> with absolute path to this repository
 #. Uncomment the line in fun! MySys which corresponds to your OS
