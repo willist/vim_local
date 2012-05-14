@@ -76,7 +76,8 @@ if has("gui_running")
     " colorscheme zellner
     set nonu
 else
-    colorscheme zellner
+    colorscheme solarized
+    " colorscheme zellner
     set background=dark
 
     set nonu
