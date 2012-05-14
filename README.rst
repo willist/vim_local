@@ -7,7 +7,7 @@ Setup
     fun! MySys()
         " return "windows"
         " return "linux"
-        " return "max"
+        " return "mac"
     endfun
 
     let $VIMLOCAL = '<repository>'
