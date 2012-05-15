@@ -18,6 +18,7 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -136,7 +137,6 @@ au BufNewFile,BufRead *.html set syntax=htmljinja
 
 set smartindent
 set ruler
-set lines=60 columns=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Folding
