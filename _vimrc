@@ -22,6 +22,10 @@ nmap <leader>w :w!<cr>
 " Fast quiting
 nmap <leader>q :q!<cr>
 
+" Don't count in octal or hex
+set nrformats-=octal
+set nrformats-=hex
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
