@@ -26,6 +26,11 @@ nmap <leader>q :q!<cr>
 set nrformats-=octal
 set nrformats-=hex
 
+" Toggle Paste Mode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
