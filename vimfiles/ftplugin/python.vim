@@ -41,3 +41,6 @@ if has("gui_win32") && !exists("b:browsefilter")
     let b:browsefilter = "Python Files (*.py)\t*.py\n" .
 		       \ "All Files (*.*)\t*.*\n"
 endif
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%80v.\+/
