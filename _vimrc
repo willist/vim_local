@@ -7,6 +7,9 @@ set laststatus=2
 " Sets how many lines of history VIM has to remember
 set history=700
 
+" Set line numbers
+set number
+
 " Enable filetype plugin
 filetype plugin on
 filetype indent on
