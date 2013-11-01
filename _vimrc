@@ -161,6 +161,7 @@ set ruler
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=indent
 set foldnestmax=10
+set foldlevel=20
 noremap <space> za
 noremap <F11> zr
 noremap <F12> zm
@@ -172,3 +173,11 @@ noremap <F12> zm
 let g:closetag_html_style=1
 
 source $VIMFILES/scripts/closetag.vim  
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> NERDTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle NERDTree
+nmap <leader>a :NERDTreeToggle<CR>
+
+
