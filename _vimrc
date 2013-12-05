@@ -58,7 +58,6 @@ set magic "Set magic on, for regular expressions
 
 set showmatch "Show matching brackets when text indicator is over them
 set mat=2 "How many tenths of a second to blink
-set number
 
 " No sound on errors
 set noerrorbells
@@ -163,8 +162,6 @@ set foldmethod=indent
 set foldnestmax=10
 set foldlevel=20
 noremap <space> za
-noremap <F11> zr
-noremap <F12> zm
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> XML Scripts
