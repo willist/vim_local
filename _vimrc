@@ -176,5 +176,4 @@ source $VIMFILES/scripts/closetag.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle NERDTree
 nmap <leader>a :NERDTreeToggle<CR>
-
-
+let g:NERDTreeDirArrows=0
