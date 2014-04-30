@@ -16,4 +16,5 @@ git clone https://github.com/tpope/vim-repeat
 git clone https://github.com/tpope/vim-sensible.git
 git clone https://github.com/tpope/vim-surround
 git clone https://github.com/nanotech/jellybeans.vim
+git clone https://github.com/jeetsukumaran/vim-buffergator
 popd
