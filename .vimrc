@@ -31,6 +31,9 @@ set tm=500
 syntax enable "Enable syntax hl
 syntax on
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colorscheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 color jellybeans
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,5 +85,5 @@ noremap <space> za
 "=> NERDTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle NERDTree
-map <C-a> :NERDTreeToggle<CR>
+nmap <leader>a :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0
