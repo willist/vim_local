@@ -70,6 +70,10 @@ au FileType python syn keyword pythonDecorator True None False self
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.html set syntax=htmljinja
 
+autocmd BufWritePost *.py call Flake8()
+autocmd FileType python map <leader>f :call Flake8()<CR>
+let g:flake8_ignore="E127,E128,E251,E261"
+
 set smartindent
 set ruler
 
