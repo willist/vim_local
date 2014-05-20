@@ -9,8 +9,8 @@ ln -sf $VIMRC .vimrc
 popd
 
 git submodule update --init
-if [ -h "~/.vim/bundle" ]; then
-    if [ -d "~/.vim/bundle" ]; then
+if [ ! -h ~/.vim/bundle ]; then
+    if [ -d ~/.vim/bundle/ ]; then
         rm -rf ~/.vim/bundle
     fi
     ln -sF $(pwd)/bundle ~/.vim/
