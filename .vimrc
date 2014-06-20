@@ -5,6 +5,7 @@ execute pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline=%{fugitive#statusline()}\ \ \ \ %<%f%=\ [%l\,%c]\ %p%%
 set laststatus=2
+set number
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -52,6 +53,9 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab
+set smartindent
+set ruler
+
 
 set lbr
 set tw=500
@@ -74,9 +78,6 @@ autocmd BufWritePost *.py call Flake8()
 autocmd FileType python map <leader>f :call Flake8()<CR>
 let g:flake8_ignore="E127,E128,E251,E261"
 
-set smartindent
-set ruler
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,3 +92,20 @@ noremap <space> za
 " Toggle NERDTree
 nmap <leader>a :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> CoffeeScript
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> JavaScript
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufReadPost *.js setl foldmethod=indent
+autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> HTML
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufReadPost *.html setl foldmethod=indent
+autocmd BufNewFile,BufReadPost *.html setl shiftwidth=2
