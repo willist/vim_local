@@ -34,6 +34,6 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
-[submodule "jshint.vim"]
-	path = jshint.vim
+[submodule "bundle/jshint.vim.git"]
+	path = bundle/jshint.vim.git
 	url = https://github.com/wookiehangover/jshint.vim.git
