@@ -32,6 +32,11 @@ set tm=500
 syntax enable "Enable syntax hl
 syntax on
 
+" Toggle Paste Mode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,3 +114,11 @@ autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufReadPost *.html setl foldmethod=indent
 autocmd BufNewFile,BufReadPost *.html setl shiftwidth=2
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Vim Gist
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:gist_open_browser_after_post = 1
+let g:gist_post_private = 1

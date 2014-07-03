@@ -37,3 +37,9 @@
 [submodule "bundle/jshint.vim.git"]
 	path = bundle/jshint.vim.git
 	url = https://github.com/wookiehangover/jshint.vim.git
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = https://github.com/mattn/gist-vim
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim
