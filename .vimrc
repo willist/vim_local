@@ -124,3 +124,10 @@ autocmd BufNewFile,BufReadPost *.html setl shiftwidth=2
 
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:syntastic_javascript_checkers = ['jsxhint']
