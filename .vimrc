@@ -5,7 +5,7 @@ execute pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline=%{fugitive#statusline()}\ \ \ \ %<%f%=\ [%l\,%c]\ %p%%
 set laststatus=2
-set number
+set relativenumber
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -82,6 +82,7 @@ au BufNewFile,BufRead *.html set syntax=htmljinja
 autocmd BufWritePost *.py call Flake8()
 autocmd FileType python map <leader>f :call Flake8()<CR>
 let g:flake8_ignore="E127,E128,E251,E261"
+let g:flake8_max_line_length=110
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Folding
@@ -96,6 +97,7 @@ noremap <space> za
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Toggle NERDTree
 nmap <leader>a :NERDTreeToggle<CR>
+nmap <leader>q :NERDTreeFind<CR>
 let g:NERDTreeDirArrows=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
