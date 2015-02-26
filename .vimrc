@@ -77,7 +77,7 @@ let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.html set syntax=htmljinja
+au BufNewFile,BufRead *.html set syntax=htmldjango
 
 autocmd BufWritePost *.py call Flake8()
 autocmd FileType python map <leader>f :call Flake8()<CR>
@@ -111,12 +111,20 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufReadPost *.js setl foldmethod=indent
 autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
+"format json
+map <leader>j :%!python -mjson.tool<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> HTML
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufReadPost *.html setl foldmethod=indent
 autocmd BufNewFile,BufReadPost *.html setl shiftwidth=2
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> CSS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufReadPost *.css setl shiftwidth=2
+autocmd BufNewFile,BufReadPost *.less setl shiftwidth=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Vim Gist
