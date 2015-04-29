@@ -111,6 +111,8 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufReadPost *.js setl foldmethod=indent
 autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
+autocmd BufNewFile,BufReadPost *.jsx setl foldmethod=indent
+autocmd BufNewFile,BufReadPost *.jsx setl shiftwidth=2
 "format json
 map <leader>j :%!python -mjson.tool<CR>
 
