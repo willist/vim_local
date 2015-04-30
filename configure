@@ -1,17 +1,5 @@
-VIMRC=$(find `pwd` -name .vimrc)
-echo $VIMRC
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-mkdir -p ~/.vim/autoload;
-curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+vim +PluginInstall +qall
 
-pushd ~
-ln -sf $VIMRC .vimrc
-popd
-
-git submodule update --init
-if [ ! -h ~/.vim/bundle ]; then
-    if [ -d ~/.vim/bundle/ ]; then
-        rm -rf ~/.vim/bundle
-    fi
-    ln -sF $(pwd)/bundle ~/.vim/
-fi
+cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
