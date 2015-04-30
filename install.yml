@@ -1,0 +1,15 @@
+---
+- hosts: personal
+  tasks: 
+    - git: repo=git@github.com:willist/vim_local.git
+           dest=~/vim_local
+    - git: repo=git@github.com:gmarik/Vundle.vim.git
+           dest=~/.vim/bundle/Vundle.vim
+    - file: src=~/vim_local/.vimrc
+            dest=~/.vimrc
+            state=link
+    - command: vim -E -u NONE -S ~/vim_local/vundle.vim +PluginInstall +qall
+      failed_when: False
+    - command: ./install.sh
+      args:
+        chdir: ~/.vim/bundle/YouCompleteMe
