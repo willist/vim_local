@@ -84,8 +84,6 @@ au BufNewFile,BufRead *.html set syntax=htmldjango
 
 autocmd BufWritePost *.py call Flake8()
 autocmd FileType python map <leader>f :call Flake8()<CR>
-let g:flake8_ignore="E127,E128,E251,E261,E309"
-let g:flake8_max_line_length=110
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Folding
@@ -151,3 +149,4 @@ let g:syntastic_javascript_checkers = ['jsxhint']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 noremap <F1> :Autoformat<CR><CR>
+let g:formatprg_args_expr_javascript = '"-f - -s.$shiftwidth"'
