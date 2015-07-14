@@ -83,9 +83,6 @@ au FileType python syn keyword pythonDecorator True None False self
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.html set syntax=htmldjango
 
-autocmd BufWritePost *.py call Flake8()
-autocmd FileType python map <leader>f :call Flake8()<CR>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
