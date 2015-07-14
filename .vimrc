@@ -1,4 +1,5 @@
 source ~/vim_local/vundle.vim
+source ~/code/personal/vim-fugitive/plugin/fugitive.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -141,8 +142,21 @@ let g:gist_post_private = 1
 "=> Syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:syntastic_javascript_checkers = ['eslint']
+" This is here because it was loading after settings were set
+source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_javascript_checkers = ['eslint', 'flow']
+let g:syntastic_python_checkers = ['flake8', 'pylama']
+let g:syntastic_css_checkers = ['csslint']
+let g:syntastic_less_checkers = ['csslint']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
+
+source ~/vim_local/csslint.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Autoformat
