@@ -76,7 +76,7 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let python_highlight_all = 1
+autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
 au FileType python syn keyword pythonDecorator True None False self
 
@@ -161,3 +161,17 @@ source ~/vim_local/csslint.vim
 
 noremap <F1> :Autoformat<CR><CR>
 let g:formatprg_args_expr_javascript = '"-f - -s.$shiftwidth"'
+
+"""
+"=> Spelling
+"""
+
+function! SpellCheck()
+    if &spell
+        setlocal nospell
+    else
+        setlocal spell spelllang=en_us
+    endif
+endfunction
+
+nnoremap <leader>s :call SpellCheck()<cr>
