@@ -13,8 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-flake8'
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'file:///Users/timwillis2/code/personal/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-repeat'
@@ -33,6 +32,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'jelera/vim-javascript-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

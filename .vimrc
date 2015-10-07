@@ -112,6 +112,7 @@ autocmd BufNewFile,BufReadPost *.js setl foldmethod=indent
 autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
 autocmd BufNewFile,BufReadPost *.jsx setl foldmethod=indent
 autocmd BufNewFile,BufReadPost *.jsx setl shiftwidth=2
+au FileType javascript call JavaScriptFold()
 "format json
 map <leader>j :%!python -mjson.tool<CR>
 
@@ -146,7 +147,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_javascript_checkers = ['eslint', 'flow']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8', 'pylama']
 let g:syntastic_css_checkers = ['csslint']
 let g:syntastic_less_checkers = ['csslint']
