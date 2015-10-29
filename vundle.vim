@@ -33,6 +33,9 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kien/ctrlp.vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'alfredodeza/coveragepy.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
