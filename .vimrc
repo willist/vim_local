@@ -37,6 +37,7 @@ syntax on
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+set nomodeline
 
 " Use vertical splits on diff
 set diffopt+=vertical
