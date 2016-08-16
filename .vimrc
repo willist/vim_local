@@ -1,5 +1,4 @@
 source ~/vim_local/vundle.vim
-source ~/code/personal/vim-fugitive/plugin/fugitive.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -41,6 +40,13 @@ set nomodeline
 
 " Use vertical splits on diff
 set diffopt+=vertical
+
+" Use magic regex by default
+nnoremap / /\v
+vnoremap / /\v
+
+vmap <C-c> "+y
+vmap <C-v> "+p
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
@@ -110,12 +116,12 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2
 "=> JavaScript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufReadPost *.js setl foldmethod=indent
-autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
+autocmd BufNewFile,BufReadPost *.js setl shiftwidth=4
 autocmd BufNewFile,BufReadPost *.jsx setl foldmethod=indent
-autocmd BufNewFile,BufReadPost *.jsx setl shiftwidth=2
-au FileType javascript call JavaScriptFold()
+autocmd BufNewFile,BufReadPost *.jsx setl shiftwidth=4
 "format json
 map <leader>j :%!python -mjson.tool<CR>
+let g:jsx_ext_required = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> HTML
@@ -154,6 +160,8 @@ let g:syntastic_css_checkers = ['csslint']
 let g:syntastic_less_checkers = ['csslint']
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_sass_checkers=["sass_lint"]
+let g:syntastic_scss_checkers=["sass_lint"]
 
 source ~/vim_local/csslint.vim
 
@@ -177,3 +185,9 @@ function! SpellCheck()
 endfunction
 
 nnoremap <leader>s :call SpellCheck()<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Local VimRC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:local_vimrc=".local_vimrc"

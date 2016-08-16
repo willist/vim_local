@@ -36,6 +36,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kien/ctrlp.vim'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'alfredodeza/coveragepy.vim'
+Plugin 'LucHermitte/lh-vim-lib'
+Plugin 'LucHermitte/local_vimrc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
