@@ -191,3 +191,7 @@ nnoremap <leader>s :call SpellCheck()<cr>
 "=> Local VimRC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:local_vimrc=".local_vimrc"
+call lh#local_vimrc#munge('whitelist', $HOME.'/code/cmg')
+call lh#local_vimrc#munge('whitelist', $HOME.'/code/personal')
+call lh#local_vimrc#munge('whitelist', $HOME.'/code/docker')
+
