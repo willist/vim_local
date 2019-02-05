@@ -116,9 +116,18 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2
 "=> JavaScript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufReadPost *.js setl foldmethod=indent
-autocmd BufNewFile,BufReadPost *.js setl shiftwidth=4
+autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2
 autocmd BufNewFile,BufReadPost *.jsx setl foldmethod=indent
-autocmd BufNewFile,BufReadPost *.jsx setl shiftwidth=4
+autocmd BufNewFile,BufReadPost *.jsx setl shiftwidth=2
+"format json
+map <leader>j :%!python -mjson.tool<CR>
+let g:jsx_ext_required = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> TypeScript
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufReadPost *.ts setl foldmethod=indent
+autocmd BufNewFile,BufReadPost *.ts setl shiftwidth=2
 "format json
 map <leader>j :%!python -mjson.tool<CR>
 let g:jsx_ext_required = 0
@@ -162,6 +171,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_sass_checkers=["sass_lint"]
 let g:syntastic_scss_checkers=["sass_lint"]
+let g:syntastic_typescript_checkers=["tslint"]
 
 source ~/vim_local/csslint.vim
 
