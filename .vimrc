@@ -152,28 +152,28 @@ let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"=> Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" "=> Syntastic
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" This is here because it was loading after settings were set
-source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
+" " This is here because it was loading after settings were set
+" source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_python_checkers = ['flake8', 'pylama']
-let g:syntastic_css_checkers = ['csslint']
-let g:syntastic_less_checkers = ['csslint']
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_sass_checkers=["sass_lint"]
-let g:syntastic_scss_checkers=["sass_lint"]
-let g:syntastic_typescript_checkers=["tslint"]
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_python_checkers = ['flake8', 'pylama']
+" let g:syntastic_css_checkers = ['csslint']
+" let g:syntastic_less_checkers = ['csslint']
+" let g:syntastic_aggregate_errors = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_sass_checkers=["sass_lint"]
+" let g:syntastic_scss_checkers=["sass_lint"]
+" let g:syntastic_typescript_checkers=["tslint"]
 
-source ~/vim_local/csslint.vim
+" source ~/vim_local/csslint.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Autoformat
