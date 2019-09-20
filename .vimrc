@@ -1,4 +1,4 @@
-source ~/vim_local/vundle.vim
+source ~/code/personal/vim_local/vundle.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -164,7 +164,7 @@ let g:gist_post_private = 1
 " set statusline+=%*
 
 " let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_python_checkers = ['flake8', 'pylama']
+" let g:syntastic_python_checkers = ['black']
 " let g:syntastic_css_checkers = ['csslint']
 " let g:syntastic_less_checkers = ['csslint']
 " let g:syntastic_aggregate_errors = 1
@@ -204,4 +204,10 @@ let g:local_vimrc=".local_vimrc"
 call lh#local_vimrc#munge('whitelist', $HOME.'/code/cmg')
 call lh#local_vimrc#munge('whitelist', $HOME.'/code/personal')
 call lh#local_vimrc#munge('whitelist', $HOME.'/code/docker')
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Black (python formatter)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufWritePre *.py execute ':Black'
 
