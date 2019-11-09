@@ -209,5 +209,11 @@ call lh#local_vimrc#munge('whitelist', $HOME.'/code/docker')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Black (python formatter)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufWritePre *.py execute ':Black'
+" autocmd BufWritePre *.py execute ':Black'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Buffergator
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:buffergator_show_full_directory_path = 0
+let g:buffergator_vsplit_size = 70
 

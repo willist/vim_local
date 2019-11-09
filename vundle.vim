@@ -28,8 +28,9 @@ Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'ambv/black'
 Plugin 'szw/vim-tags'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
