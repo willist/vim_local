@@ -31,6 +31,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'szw/vim-tags'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

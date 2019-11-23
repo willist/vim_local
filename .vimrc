@@ -157,18 +157,22 @@ let g:gist_post_private = 1
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " " This is here because it was loading after settings were set
-" source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
+source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['flake8']
 " let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_python_checkers = ['black']
 " let g:syntastic_css_checkers = ['csslint']
 " let g:syntastic_less_checkers = ['csslint']
-" let g:syntastic_aggregate_errors = 1
-" let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_sass_checkers=["sass_lint"]
 " let g:syntastic_scss_checkers=["sass_lint"]
 " let g:syntastic_typescript_checkers=["tslint"]
