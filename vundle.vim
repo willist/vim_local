@@ -21,7 +21,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'mitsuhiko/vim-jinja'
-Plugin 'embear/vim-localvimrc'
+" Plugin 'embear/vim-localvimrc'
 Plugin 'bling/vim-airline'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'LucHermitte/lh-vim-lib'
@@ -32,6 +32,7 @@ Plugin 'szw/vim-tags'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'jvirtanen/vim-hcl'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
