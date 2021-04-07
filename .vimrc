@@ -32,11 +32,8 @@ set tm=500
 syntax enable "Enable syntax hl
 syntax on
 
-" Toggle Paste Mode
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-set showmode
-set nomodeline
+" Use system clipboard
+set clipboard=unnamed
 
 " Use vertical splits on diff
 set diffopt+=vertical
@@ -94,7 +91,7 @@ au BufNewFile,BufRead *.html set syntax=htmldjango
 "=> Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=indent
-set foldnestmax=10
+set foldnestmax=100
 set foldlevel=20
 noremap <space> za
 
@@ -176,6 +173,7 @@ let g:syntastic_python_checkers = ['flake8']
 " let g:syntastic_sass_checkers=["sass_lint"]
 " let g:syntastic_scss_checkers=["sass_lint"]
 " let g:syntastic_typescript_checkers=["tslint"]
+let b:syntastic_mode = 'passive'
 
 " source ~/vim_local/csslint.vim
 
@@ -205,15 +203,6 @@ nnoremap <leader>s :call SpellCheck()<cr>
 "=> Local VimRC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:local_vimrc=".local_vimrc"
-call lh#local_vimrc#munge('whitelist', $HOME.'/code/cmg')
-call lh#local_vimrc#munge('whitelist', $HOME.'/code/personal')
-call lh#local_vimrc#munge('whitelist', $HOME.'/code/docker')
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"=> Black (python formatter)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmd BufWritePre *.py execute ':Black'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Buffergator
