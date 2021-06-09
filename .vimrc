@@ -141,6 +141,16 @@ autocmd BufNewFile,BufReadPost *.html setl shiftwidth=2
 autocmd BufNewFile,BufReadPost *.css setl shiftwidth=2
 autocmd BufNewFile,BufReadPost *.less setl shiftwidth=2
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"=> Terraform
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufReadPost *.tf setl shiftwidth=2
+autocmd BufRead,BufNewFile *.tf set filetype=terraform
+
+autocmd BufNewFile,BufReadPost *.hcl setl shiftwidth=2
+autocmd BufRead,BufNewFile *.hcl set filetype=terraform
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "=> Vim Gist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
