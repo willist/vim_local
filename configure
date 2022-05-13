@@ -6,4 +6,4 @@ fish -c "ln -Fs $PWD/.vimrc $HOME/.vimrc"
 
 git -C $vundle pull || git clone https://github.com/gmarik/Vundle.vim.git $vundle
 
-vim +PluginInstall +qall
+vim +PluginInstall +VundleUpdate +qall

@@ -66,8 +66,9 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab
-set smartindent
+set autoindent
 set ruler
+filetype plugin indent on
 
 
 set lbr
@@ -159,31 +160,37 @@ let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
 
+"""
+" "=> ALE
+""""
+" let g:ale_linters = ['flake8', 'pylint']
+let g:ale_lint_on_save = 1
+
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " "=> Syntastic
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " " This is here because it was loading after settings were set
-source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
-
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_python_checkers = ['flake8']
+" source ~/.vim/bundle/syntastic/plugin/syntastic.vim 
+" 
+" 
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" 
+" let g:syntastic_python_checkers = ['flake8']
 " let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_css_checkers = ['csslint']
 " let g:syntastic_less_checkers = ['csslint']
 " let g:syntastic_sass_checkers=["sass_lint"]
 " let g:syntastic_scss_checkers=["sass_lint"]
 " let g:syntastic_typescript_checkers=["tslint"]
-let b:syntastic_mode = 'passive'
+" let b:syntastic_mode = 'passive'
 
 " source ~/vim_local/csslint.vim
 
@@ -219,4 +226,3 @@ let g:local_vimrc=".local_vimrc"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:buffergator_show_full_directory_path = 0
 let g:buffergator_vsplit_size = 70
-

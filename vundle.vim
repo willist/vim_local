@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'stephpy/vim-yaml'
-Plugin 'nvie/vim-flake8'
+" Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'terryma/vim-multiple-cursors'
@@ -30,9 +30,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'szw/vim-tags'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'peitalin/vim-jsx-typescript'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'dense-analysis/ale'
 Plugin 'hashivim/vim-terraform'
+Plugin 'dag/vim-fish'
+" Plugin 'inkarkat/vim-IndentCommentPrefix'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
