@@ -36,6 +36,7 @@ Plugin 'dense-analysis/ale'
 Plugin 'hashivim/vim-terraform'
 Plugin 'dag/vim-fish'
 " Plugin 'inkarkat/vim-IndentCommentPrefix'
+Plugin 'darfink/vim-plist'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
