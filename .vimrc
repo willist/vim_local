@@ -226,3 +226,7 @@ let g:local_vimrc=".local_vimrc"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:buffergator_show_full_directory_path = 0
 let g:buffergator_vsplit_size = 70
+
+if has("patch-8.1.0360")
+    set diffopt+=internal,algorithm:patience
+endif
